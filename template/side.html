@@ -1,0 +1,55 @@
+
+<? if(!isset($_SESSION['name'])) {?>
+<form id='auth'>
+    <div class='login'>
+      <div class='lh'>Авторизация<a href='?mode=registration' class='lr'>регистрация</a></div>
+      <div class='lcn'>
+
+			<input type='text' id='login'  placeholder='Логин' />
+
+			<input type='password' id='passwd' placeholder='Пароль' />
+        <input type='submit' value='Войти' />
+    </div>
+</form>
+<? } else { ?>
+<div class='login'>
+  <div class='lh'>
+     <L><?=$_SESSION['name']?></L><a class='lr' href='' id="exit">выйти</a><br>
+    <ul>
+      <li class='stick bg-red'>
+		<a href='?mode=changepassword'><div class='icon-cog'>
+			<img width='20' height='20' src='../template/img/change_password.png'></div>
+			Сменить пароль
+		</a>
+	  </li>
+      <li class='stick bg-yellow'>
+		<a href='?mode=donate'><div class='icon-cog'>
+			<img width='20' height='20' src='../template/img/money.png'></div>
+			Услуги
+		</a>
+	  </li>
+    </ul>
+  </div>
+</div>
+<? } ?>
+<div class='sh'>Наблюдения</div>
+  <div class="spoiler-wrapper">
+    <div class="spoiler ">
+      Сервер #1 (10/50 игроков)
+    </div>
+    <div class="spoiler-text">
+	  Версия: 1.7.10 <br>
+	  Пвп: включен <br>
+      Моды: ic2 > gregtech, railcraft, decorate, buildcraft, applied energistics, twilight forest, forestry. 
+    </div>
+	<div style="margin-bottom: 5%;"></div>
+    <div class="spoiler ">
+      Сервер #2 (13/20 игроков)
+    </div>
+    <div class="spoiler-text">
+	  Версия: 1.7.10 <br>
+	  Пвп: включен <br>
+      Моды: ic2 > gregtech, railcraft, decorate, buildcraft, applied energistics, twilight forest, forestry. 
+    </div>
+</div>
+        
